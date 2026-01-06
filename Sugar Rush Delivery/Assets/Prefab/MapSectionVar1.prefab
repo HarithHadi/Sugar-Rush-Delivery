@@ -4830,6 +4830,59 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &5193103692063760520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8596054646026447563}
+  - component: {fileID: 8401246741565897918}
+  m_Layer: 0
+  m_Name: TriggerSection
+  m_TagString: Trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8596054646026447563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193103692063760520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65, y: 3.4, z: 42.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3276287871908115915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8401246741565897918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193103692063760520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: -14, y: 10.5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9191666719130448177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,9 +4892,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3276287871908115915}
+  - component: {fileID: 4045053221348835894}
+  - component: {fileID: 3330284041063219478}
+  - component: {fileID: 3274257188547645771}
   m_Layer: 0
   m_Name: MapSectionVar1
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4975,8 +5031,69 @@ Transform:
   - {fileID: 7569624513132756337}
   - {fileID: 6263647372748580775}
   - {fileID: 4938851164624146834}
+  - {fileID: 8596054646026447563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4045053221348835894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191666719130448177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a501c45ee2002c04190624e9542b40fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &3330284041063219478
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191666719130448177}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3274257188547645771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191666719130448177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52eec8ee67128d84c8c487ccaf384791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle:
+  - {fileID: 7249484252076683119, guid: 1907958d837810e47946de11003be97c, type: 3}
+  - {fileID: 794440832150604990, guid: 2b95ae7441f78364bb9896af29e6966f, type: 3}
+  - {fileID: 7759858975104852573, guid: 1d95d9718ad65d24d88e3354c36df1d2, type: 3}
+  lanes:
+  - -6
+  - -3.25
+  - -0.1
+  obstacleCount: 10
 --- !u!1001 &518600713800327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4991,7 +5108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5029,6 +5146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5053,7 +5174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5091,6 +5212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5115,7 +5240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5153,6 +5278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5177,7 +5306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86983085
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5215,6 +5344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5239,7 +5372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5277,6 +5410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5301,7 +5438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5338,6 +5475,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_Name
       value: wooden winter house 3 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5401,6 +5542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road 1  (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5425,7 +5570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89122033
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5463,6 +5608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter small (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5487,7 +5636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5525,6 +5674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5549,7 +5702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5587,6 +5740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5611,7 +5768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5649,6 +5806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5673,7 +5834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5711,6 +5872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5735,7 +5900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5773,6 +5938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5797,7 +5966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8232715
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5835,6 +6004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5859,7 +6032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8232715
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5897,6 +6070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5921,7 +6098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5959,6 +6136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5983,7 +6164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8602104
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6021,6 +6202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter medium (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6045,7 +6230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df7ced8f9bf2412499ae55621939f829, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.78765166
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df7ced8f9bf2412499ae55621939f829, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6083,6 +6268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden pendant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df7ced8f9bf2412499ae55621939f829, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6107,7 +6296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6145,6 +6334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6169,7 +6362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6207,6 +6400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6231,7 +6428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6269,6 +6466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6293,7 +6494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8358669
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6331,6 +6532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter tilted (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6355,7 +6560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6393,6 +6598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6417,7 +6626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8818228
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6455,6 +6664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6479,7 +6692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6516,6 +6729,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_Name
       value: wooden winter house 3 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6595,6 +6812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: skull mountain
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a56ddc5053c4e06408b429e37772e662, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6619,7 +6840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6657,6 +6878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6681,7 +6906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86983085
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6719,6 +6944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6743,7 +6972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6781,6 +7010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6805,7 +7038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8232715
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6842,6 +7075,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_Name
       value: wooden winter house 3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6905,6 +7142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road 1  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6967,6 +7208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road 1  (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6991,7 +7236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86983085
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7029,6 +7274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7053,7 +7302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7091,6 +7340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7115,7 +7368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7153,6 +7406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7177,7 +7434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7215,6 +7472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7239,7 +7500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8232716
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7277,6 +7538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7301,7 +7566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8602104
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7339,6 +7604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter medium (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7363,7 +7632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7401,6 +7670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7425,7 +7698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7463,6 +7736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7487,7 +7764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7525,6 +7802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7549,7 +7830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89122033
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7587,6 +7868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter small
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7611,7 +7896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7649,6 +7934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7673,7 +7962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8358669
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7711,6 +8000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter tilted (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7735,7 +8028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86983085
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7773,6 +8066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7797,7 +8094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8818228
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7835,6 +8132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7859,7 +8160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7897,6 +8198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7921,7 +8226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7959,6 +8264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7983,7 +8292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8021,6 +8330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8045,7 +8358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8082,6 +8395,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_Name
       value: wooden winter house 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8161,6 +8478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3615299149272416980, guid: fa9b3057ee026bb41a40d9f7eabfef7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8185,7 +8506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8602104
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8223,6 +8544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter medium (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8247,7 +8572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8358669
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8284,6 +8609,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_Name
       value: fir tree winter tilted
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8347,6 +8676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road 1  (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8371,7 +8704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8409,6 +8742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8433,7 +8770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8471,6 +8808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8495,7 +8836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8533,6 +8874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8557,7 +8902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8595,6 +8940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8619,7 +8968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8657,6 +9006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8681,7 +9034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8719,6 +9072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8743,7 +9100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8780,6 +9137,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_Name
       value: wooden winter house 3 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8843,6 +9204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road 1  (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8867,7 +9232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8905,6 +9270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8929,7 +9298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8967,6 +9336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8991,7 +9364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8602104
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9028,6 +9401,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_Name
       value: fir tree winter medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9091,6 +9468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road 1  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9115,7 +9496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8818228
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9153,6 +9534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9177,7 +9562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9215,6 +9600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9239,7 +9628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9277,6 +9666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9301,7 +9694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86983085
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9339,6 +9732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9363,7 +9760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8232716
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9401,6 +9798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9425,7 +9826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96452b2d90ac00f49a1bcf2bdcc9fa9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8279371
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96452b2d90ac00f49a1bcf2bdcc9fa9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9463,6 +9864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96452b2d90ac00f49a1bcf2bdcc9fa9d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9487,7 +9892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9525,6 +9930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9549,7 +9958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9587,6 +9996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9611,7 +10024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9649,6 +10062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9673,7 +10090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8358669
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9711,6 +10128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter tilted (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9735,7 +10156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9773,6 +10194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9797,7 +10222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96452b2d90ac00f49a1bcf2bdcc9fa9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8311233
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 96452b2d90ac00f49a1bcf2bdcc9fa9d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9835,6 +10260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96452b2d90ac00f49a1bcf2bdcc9fa9d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9859,7 +10288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8818228
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9897,6 +10326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9921,7 +10354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5baf677534b54443bc16c6ac329520d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8098314
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5baf677534b54443bc16c6ac329520d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9959,6 +10392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: information post
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5baf677534b54443bc16c6ac329520d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9983,7 +10420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10021,6 +10458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10045,7 +10486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0ad9d78452fa8e4e89bbc45fc9e2626, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8519326
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0ad9d78452fa8e4e89bbc45fc9e2626, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10083,6 +10524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: winter well
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0ad9d78452fa8e4e89bbc45fc9e2626, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10107,7 +10552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10145,6 +10590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10169,7 +10618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8358669
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10207,6 +10656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter tilted (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10231,7 +10684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8818228
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10269,6 +10722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10293,7 +10750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10331,6 +10788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10355,7 +10816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10392,6 +10853,10 @@ PrefabInstance:
     - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_Name
       value: Fence04 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10455,6 +10920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Road 1 '
       objectReference: {fileID: 0}
+    - target: {fileID: 6965276927511497642, guid: a5e40d8eb9e7ea840824a0bfd6a748c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10479,7 +10948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10517,6 +10986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10541,7 +11014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89122033
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10579,6 +11052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10603,7 +11080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8602104
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10641,6 +11118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter medium (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10665,7 +11146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10703,6 +11184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce2f1b2221ce5fb4ab234e7f1823f057, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10727,7 +11212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10765,6 +11250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aeadf798da78d304cb3ac8775589eba4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10789,7 +11278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8358669
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10827,6 +11316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter tilted (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 582d91f3d5af3144783632a10b6b4346, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10851,7 +11344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10889,6 +11382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10913,7 +11410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10951,6 +11448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10975,7 +11476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11013,6 +11514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11037,7 +11542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11075,6 +11580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11099,7 +11608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11137,6 +11646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11161,7 +11674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89122033
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11198,6 +11711,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_Name
       value: fir tree winter small (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11277,6 +11794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3615299149272416980, guid: fa9b3057ee026bb41a40d9f7eabfef7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11301,7 +11822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11339,6 +11860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11363,7 +11888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11401,6 +11926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11425,7 +11954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89122033
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11463,6 +11992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter small (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11487,7 +12020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11525,6 +12058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11549,7 +12086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11587,6 +12124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11611,7 +12152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df7ced8f9bf2412499ae55621939f829, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.78765166
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df7ced8f9bf2412499ae55621939f829, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11649,6 +12190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden pendant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df7ced8f9bf2412499ae55621939f829, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11673,7 +12218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89122033
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11711,6 +12256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter small (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f36ca91802a257d4080ce0fb808f3616, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11735,7 +12284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8232715
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11773,6 +12322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11797,7 +12350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8602104
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11835,6 +12388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter medium (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9ddc26dccccde438b5298c6c69670d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11859,7 +12416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11897,6 +12454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wooden winter house 3 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bca1a36dbda2e924ab8e10cc11b10586, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11921,7 +12482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.856594
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2200801664669434643, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11958,6 +12519,10 @@ PrefabInstance:
     - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
       propertyPath: m_Name
       value: Fence04 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852215361019933877, guid: fb18495b370df3b458558ddbb489699d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12037,6 +12602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3615299149272416980, guid: fa9b3057ee026bb41a40d9f7eabfef7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12061,7 +12630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.86983085
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12099,6 +12668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir tree winter bent (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12123,7 +12696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8818228
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12160,6 +12733,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
       propertyPath: m_Name
       value: fir tree winter bent (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176c48202f5c6d24f9fc3b20c84b85db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

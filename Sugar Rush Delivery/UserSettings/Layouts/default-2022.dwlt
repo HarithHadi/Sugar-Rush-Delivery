@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 104
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 43
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20
+  controlID: 44
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -501,7 +501,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -57172
+  m_LastSelectedObjectID: -225912
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -949,9 +949,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.374866, y: -1.4326687, z: 58.988224}
+    m_Target: {x: -27.66217, y: -16.242905, z: 87.49301}
     speed: 2
-    m_Value: {x: 10.374866, y: -1.4326687, z: 58.988224}
+    m_Value: {x: -27.66217, y: -16.242905, z: 87.49301}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -997,20 +997,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.19962318, y: 0.05640371, z: -0.011507712, w: -0.9781896}
+    m_Target: {x: -0.32009968, y: 0.515627, z: -0.21576625, w: -0.7649698}
     speed: 2
-    m_Value: {x: -0.1996039, y: 0.057870407, z: -0.011807027, w: -0.978095}
+    m_Value: {x: -0.3189409, y: 0.5159324, z: -0.21498509, w: -0.76542276}
   m_Size:
-    m_Target: 86.460526
+    m_Target: 53.503746
     speed: 2
-    m_Value: 86.460526
+    m_Value: 53.503746
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.06047
+    m_SpeedNormalized: 0.53
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -1095,7 +1095,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1166,21 +1166,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 82ecfefff626fffff647ffff104effff5a59ffff1065ffff746fffffda89ffff18fbffff4ec70000
+      m_ExpandedIDs: ca7bf6ffd07bf6ffd87ff6ff7e11f7ff9811f7ffa015f7ff584ef7ffba4ef7ff6257f7ff4669f7ffde69f7fff869f7ff586cf7ff625ef8ff3c62f8ffd668f8ff2096f9ff7e98f9fff6f0ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: MapSectionVar1
-        m_OriginalName: MapSectionVar1
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -416182
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -1235,7 +1235,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants
+    - Assets/Prefab
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1243,31 +1243,31 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Palmov Island/Low Poly Atmospheric Locations Pack/Prefabs/Plants
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Documents\GitHub\Sugar-Rush-Delivery\Sugar Rush
     Delivery
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 80}
-    m_SelectedIDs: ee640000
-    m_LastClickedID: 25838
-    m_ExpandedIDs: 000000001c5a0000ae640000b2640000ba640000c2640000d2640000da640000ea640000f6640000fe6400000a650000da650000d4b00000d8b00000e0b0000078ca0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ba5e0000
+    m_LastClickedID: 24250
+    m_ExpandedIDs: 00000000ee5d0000f25d0000f45d0000f65d0000f85d0000fa5d0000fc5d0000fe5d0000005e0000045e0000065e0000085e0000985e0000a25e0000ba5e0000d8150200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Palm trees
-      m_OriginalName: Palm trees
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26118
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -1281,7 +1281,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000ee5d0000f05d0000f25d0000f45d0000f65d0000f85d0000fa5d0000fc5d0000fe5d0000005e0000025e0000045e0000065e0000085e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1309,7 +1309,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000a4c50000b2640000ae64000000000000f2890000
+    m_ExpandedInstanceIDs: c6230000a4c50000b2640000ae640000f289000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
