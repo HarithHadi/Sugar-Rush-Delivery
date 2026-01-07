@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 3276287871908115915}
   - component: {fileID: 173788426998113174}
   - component: {fileID: -5938462519325078437}
+  - component: {fileID: 6935659207090821928}
   m_Layer: 0
   m_Name: MapSectionVar3
   m_TagString: Map
@@ -247,6 +248,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a501c45ee2002c04190624e9542b40fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6935659207090821928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191666719130448177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52eec8ee67128d84c8c487ccaf384791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle:
+  - {fileID: 794440832150604990, guid: 2b95ae7441f78364bb9896af29e6966f, type: 3}
+  - {fileID: 7759858975104852573, guid: 1d95d9718ad65d24d88e3354c36df1d2, type: 3}
+  obstacleCount: 10
 --- !u!1001 &3078205534842166
 PrefabInstance:
   m_ObjectHideFlags: 0

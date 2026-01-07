@@ -355,6 +355,7 @@
 "Assets/FastMesh/Scripts/SceneViewText.cs"
 "Assets/Script/CollisionDetector.cs"
 "Assets/Script/Move.cs"
+"Assets/Script/PlayerController.cs"
 "Assets/Script/SpawnObstacle.cs"
 "Assets/Script/TriggerSection.cs"
 -langversion:9.0

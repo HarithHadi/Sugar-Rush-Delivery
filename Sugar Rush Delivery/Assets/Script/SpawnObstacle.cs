@@ -4,47 +4,40 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
-    [Header ("Prefabs")]
+    [Header("Prefabs")]
     public GameObject[] obstacle;
+    public GameObject scoreZone;
 
     [Header("Settings")]
-    public float[] lanes = { -6f, -3.25f, -0.1f };
+    private float[] lanes = { -6f, -3.25f, -0.1f };
     public int obstacleCount = 10;
-    // Start is called before the first frame update
+    private int[] zPos = {0, 30, 60, 90, 120, 150, 180 };
+
+
     void Start()
     {
         SpawnThings();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnThings()
     {
-        
-    }
-
-    public void SpawnThings() 
-    {
+        //copy of the lanes
         List<float> availableLanes = new List<float>(lanes);
 
-        int maxObstacles = lanes.Length - 1;
-        int spawnCount = Mathf.Min(obstacleCount, maxObstacles);
-
-        for (int i = 0; i < obstacleCount; i++) 
+        foreach (int Zcurr in zPos) 
         {
-            int laneIndex = Random.Range(0, availableLanes.Count);
-            float xPos = availableLanes[laneIndex];
-            availableLanes.RemoveAt(laneIndex);
+            int XposIndex = Random.Range(0, availableLanes.Count); // 0-3 random
+            int currZpos = Zcurr; 
 
-            float randomZ = Random.Range(0, 160);
+            Vector3 spawnPos = new Vector3(availableLanes[XposIndex], 0 ,currZpos);
 
-            Vector3 localSpawnPos = new Vector3(xPos, 0, randomZ);
+            
+
             int prefabIndex = Random.Range(0, obstacle.Length);
             GameObject obj = Instantiate(obstacle[prefabIndex], transform);
-
-            //to make the obstacle move with the map
-            obj.transform.localPosition = localSpawnPos;
+            obj.transform.localPosition = spawnPos;
         }
         
     }
-    
+
 }

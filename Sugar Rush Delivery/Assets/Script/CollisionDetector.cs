@@ -23,5 +23,10 @@ public class CollisionDetector : MonoBehaviour
             //-1 life
             Debug.Log("Hit Obstacle");
         }
+        else if (other.gameObject.CompareTag("ScoreZone"))
+        {
+            //-1 life
+            Debug.Log("+1 point");
+        }
     }
 }

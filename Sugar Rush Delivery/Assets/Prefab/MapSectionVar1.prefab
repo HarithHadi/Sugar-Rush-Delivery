@@ -5086,13 +5086,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle:
-  - {fileID: 7249484252076683119, guid: 1907958d837810e47946de11003be97c, type: 3}
   - {fileID: 794440832150604990, guid: 2b95ae7441f78364bb9896af29e6966f, type: 3}
   - {fileID: 7759858975104852573, guid: 1d95d9718ad65d24d88e3354c36df1d2, type: 3}
-  lanes:
-  - -6
-  - -3.25
-  - -0.1
   obstacleCount: 10
 --- !u!1001 &518600713800327
 PrefabInstance:

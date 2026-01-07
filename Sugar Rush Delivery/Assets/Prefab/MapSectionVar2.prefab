@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 3276287871908115915}
   - component: {fileID: 5610098476231726423}
   - component: {fileID: 2703556045295081095}
+  - component: {fileID: 4513393197725359993}
   m_Layer: 0
   m_Name: MapSectionVar2
   m_TagString: Map
@@ -199,6 +200,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4513393197725359993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191666719130448177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52eec8ee67128d84c8c487ccaf384791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle:
+  - {fileID: 794440832150604990, guid: 2b95ae7441f78364bb9896af29e6966f, type: 3}
+  - {fileID: 7759858975104852573, guid: 1d95d9718ad65d24d88e3354c36df1d2, type: 3}
+  obstacleCount: 10
 --- !u!1001 &232286446350976328
 PrefabInstance:
   m_ObjectHideFlags: 0
